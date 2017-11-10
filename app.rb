@@ -11,7 +11,7 @@ def current_user
 end
 
 def authenticate_user
-  redirect '/' if current_user.nil?
+    redirect '/' if current_user.nil?
 end
 
 # Database configuration
@@ -19,9 +19,9 @@ set :database, "sqlite3:development.sqlite3"
 
 # Define routes below
 get '/' do
+  # @posts = Post.all
   erb :index
 end
-
 
 # Fatima's routes
 get '/logout' do
@@ -35,57 +35,7 @@ post '/login' do
   session[:user_id] = user.id
   redirect "/"
 end
-
-
 # End Fatima's routes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # *Dallas Start*
 get '/profile' do
   redirect '/'
@@ -100,95 +50,7 @@ post '/profile' do
   @user.posts.create(body: params[:body])
   redirect '/profile'
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # *Dallas End*
-
-
-
 #Mike's routes start here
 
 get '/account' do

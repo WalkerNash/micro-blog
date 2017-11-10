@@ -12,6 +12,21 @@ get '/' do
 end
 
 
+# Fatima's routes
+get '/logout' do
+  session.clear
+  redirect '/'
+end
+
+post '/login' do
+  username = params[:username].downcase
+  user = User.find_or_create_by(username: username)
+  session[:user_id] = user.id
+  redirect "/"
+end
+# End Fatima's routes
+
+
 
 
 
@@ -226,5 +241,6 @@ delete '/profile/:id' do
   user.destroy
   redirect '/'
 end
+
 
 

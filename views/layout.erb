@@ -2,12 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Micro-Blogging</title>
     <link rel="stylesheet" href="/stylesheets/index.css">
   </head>
   <body>
-
-    <%= yield %>
-    <script src="/js/index.js"></script>
+  <div class="container">
+    <nav>
+      <!-- If logged out -->
+      Sign Up or Log In:
+      <form action="/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username">
+        <input type="submit" value="Submit">
+      </form>
+      <!-- If logged in -->
+      <a href="/profile">My Profile</a>
+      <a href="/account">Account Details</a>
+      <a href="/logout">Log Out</a>
+    </nav>
+      <%= yield %>
+      <script src="/js/index.js"></script>
+  </div><!-- End container -->
   </body>
 </html>

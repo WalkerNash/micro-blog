@@ -98,32 +98,20 @@ end
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # *Dallas Start*
+get '/profile' do
+  redirect '/'
+end
 
+get '/profile/:id' do
+  @post = Post.find_by_id(params[:user_id])
+  erb :'profile'
+end
 
-
-
-
-
-
-
-
-
-
+post '/profile' do
+  @user.posts.create(body: params[:body])
+  redirect '/profile'
+end
 
 
 
@@ -241,6 +229,3 @@ delete '/profile/:id' do
   user.destroy
   redirect '/'
 end
-
-
-

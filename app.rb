@@ -3,6 +3,17 @@ require 'sinatra/reloader'
 require 'sinatra/activerecord'
 require './models'
 
+enable :sessions
+
+#helper methods
+def current_user
+  @user ||= User.find_by_id(session[:user_id])
+end
+
+def authenticate_user
+  redirect '/' if current_user.nil?
+end
+
 # Database configuration
 set :database, "sqlite3:development.sqlite3"
 
@@ -24,6 +35,8 @@ post '/login' do
   session[:user_id] = user.id
   redirect "/"
 end
+
+
 # End Fatima's routes
 
 
@@ -236,11 +249,8 @@ patch '/profile/:id' do
 end
 
 
-delete '/profile/:id' do
+delete '/' do
   user = User.find_by_id(params[:id])
   user.destroy
   redirect '/'
 end
-
-
-

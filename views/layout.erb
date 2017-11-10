@@ -16,6 +16,7 @@
         <input type="submit" value="Submit">
       </form>
       <!-- If logged in -->
+      <h1>Welcome, <%= @user.username %></h1>
       <a href="/profile">My Profile</a>
       <a href="/account">Account Details</a>
       <a href="/logout">Log Out</a>

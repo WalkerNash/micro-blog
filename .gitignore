@@ -1,2 +1,2 @@
 .ds_store
-development.sqlite3
+*.sqlite3

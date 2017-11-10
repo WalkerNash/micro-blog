@@ -86,31 +86,6 @@ end
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # *Dallas Start*
 get '/profile' do
   redirect '/'

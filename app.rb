@@ -70,7 +70,7 @@ patch '/profile' do
     location: params[:location],
     email: params[:email]
   )
-  erb :profile
+  redirect "/profile/#{@user.id}"
 end
 
 delete '/' do

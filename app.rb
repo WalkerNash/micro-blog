@@ -49,6 +49,9 @@ post '/login' do
 end
 # End Fatima's routes
 # *Dallas Start*
+get '/profile/user_id' do
+  @user = current_user
+  @post = Post.where(params[:user_id])
 get '/profile/:user_id' do
   @user = current_user
   @posts = Post.where(user_id: params[:user_id])

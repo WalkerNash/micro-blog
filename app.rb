@@ -62,8 +62,7 @@ get '/account' do
 end
 
 patch '/profile' do
-  
-  User.update(
+    User.update(
     username: params[:username],
     f_name: params[:f_name],
     l_name: params[:l_name],
@@ -73,9 +72,8 @@ patch '/profile' do
   erb :profile
 end
 
-
 delete '/' do
   user = User.find_by_id(params[:id])
   user.destroy
-  redirect '/'
+  erb :index
 end

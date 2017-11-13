@@ -2,11 +2,28 @@
   box-sizing: border-box;
 }
 
-input {
-  font-size: 20px;
+#account-form {
+    margin: 25px;
+    background-color: gray;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
 }
 
-input [type=text] {
-    margin: 10px;
-    color: red;
+input[type=text], [type=email] select {
+    padding: 5px 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    padding: 5px 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }

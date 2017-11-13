@@ -3,6 +3,7 @@
 <!-- Post Form -->
 <div>
   <form class="" action="/" method="post">
+    <input type="hidden" name="username">
     <textarea name="body" rows="8" cols="80"></textarea>
     <input type="submit" value="Post">
   </form>
@@ -10,21 +11,12 @@
 
 <!-- Begin Post Loop -->
 <div class="post">
-<<<<<<< HEAD
-<span><a href="#">username</a></span>
-<article class="post-body">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste assumenda nam, harum, dicta dolorum temporibus provident ullam incidunt qui excepturi quibusdam, commodi esse! Veritatis cumque accusamus, porro corrupti, quas consequuntur.
-</article>
-<span>Delete</span>
-<hr />
-=======
   <% @posts.reverse_each do |post| %>
-    <span><a href="#"><%= post.user_id %></a></span>
+    <span><a href="#"><%= post.user.username %></a></span>
     <article class="post-body">
     <%= post.body %>
     </article>
     <span>Delete</span>
     <hr />
   <% end %>
->>>>>>> master
 </div>

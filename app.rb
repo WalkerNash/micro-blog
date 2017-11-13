@@ -62,7 +62,7 @@ get '/account' do
 end
 
 patch '/profile' do
-  user = User.find_by_id(params[:id])
+  
   User.update(
     username: params[:username],
     f_name: params[:f_name],

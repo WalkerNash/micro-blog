@@ -16,7 +16,7 @@
         <input type="submit" value="Submit">
       </form>
       <!-- If logged in -->
-      <a href="/profile">My Profile</a>
+      <a href="/profile/<%=current_user.id if current_user%>">My Profile</a>
       <a href="/account">Account Details</a>
       <a href="/logout">Log Out</a>
     </nav>

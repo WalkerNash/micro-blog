@@ -61,21 +61,21 @@ get '/account' do
   end
 end
 
-patch '/profile/:id' do
-  user = User.find_by_id(params[:id])
-  user.update(
+patch '/profile' do
+    @user = current_user
+    @user.update(
     username: params[:username],
     f_name: params[:f_name],
     l_name: params[:l_name],
     location: params[:location],
     email: params[:email]
   )
-  redirect "/profile/#{user.id}"
+  erb :profile
 end
 
-
 delete '/' do
-  user = User.find_by_id(params[:id])
-  user.destroy
+  @user = current_user
+  #user = User.find_by_id(params[:id])
+  @user.destroy
   redirect '/'
 end

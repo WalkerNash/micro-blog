@@ -61,9 +61,9 @@ get '/account' do
   end
 end
 
-patch '/profile/:id' do
+patch '/profile' do
   user = User.find_by_id(params[:id])
-  user.update(
+  User.update(
     username: params[:username],
     f_name: params[:f_name],
     l_name: params[:l_name],

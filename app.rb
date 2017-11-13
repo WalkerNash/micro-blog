@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 require './models'
+# require 'pry'
 
 enable :sessions
 
@@ -19,12 +20,6 @@ set :database, "sqlite3:development.sqlite3"
 
 # Define routes below
 get '/' do
-<<<<<<< HEAD
-  # @posts = Post.all
-  erb :index
-end
-
-=======
   # authenticate_user
   @posts = Post.all
   erb :index
@@ -33,15 +28,13 @@ end
 #posts create
 post '/' do
   authenticate_user
-  # current_user
-  post = Post.create(
-    body:params[:body],
-    user_id: params[:user_id]
+  username = params[:username]
+  @user.posts.create(
+    body: params[:body]
   )
-  erb :index
+  redirect '/'
 end
 
->>>>>>> master
 # Fatima's routes
 get '/logout' do
   session.clear
@@ -56,8 +49,6 @@ post '/login' do
 end
 # End Fatima's routes
 # *Dallas Start*
-<<<<<<< HEAD
-=======
 get '/profile' do
   @user = current_user
   redirect "/profile/#{@user.id}"
@@ -80,7 +71,7 @@ post "/profile/#{@user_id}" do
   )
   redirect "/profile/#{@user.id}"
 end
->>>>>>> master
+
 # *Dallas End*
 #Mike's routes start here
 

@@ -1,29 +1,31 @@
 
 <%= @user.id %>
+<%= @user.username %>
 
 
+
+<div id="account-form">
+<form action="/profile" method="post">
 <h1>Edit your account details</h1>
-
-<form class="account-form" action="/profile" method="post">
 <input type="hidden" name="_method" value="patch">
 
-<label for="username">Username</label>
+<label for="username">Username: </label>
 <input type="text" name="username" value="<%= @user.username %>">
 <br>
 <br>
-<label for="f_name">First name</label>
+<label for="f_name">First name: </label>
 <input type="text" name="f_name" value="<%= @user.f_name %>">
 <br>
 <br>
-<label for="l_name">Last name</label>
+<label for="l_name">Last name: </label>
 <input type="text" name="l_name" value="<%= @user.l_name %>">
 <br>
 <br>
-<label for="location">Location</label>
+<label for="location">Location: </label>
 <input type="text" name="location" value="<%= @user.location %>">
 <br>
 <br>
-<label for="email">Email address</label>
+<label for="email">Email address: </label>
 <input type="email" name="email" value="<%= @user.email %>">
 <br>
 <br>
@@ -34,3 +36,4 @@
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete your account">
 </form>
+</div>

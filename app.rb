@@ -19,7 +19,19 @@ set :database, "sqlite3:development.sqlite3"
 
 # Define routes below
 get '/' do
-  # @posts = Post.all
+  # authenticate_user
+  @posts = Post.all
+  erb :index
+end
+
+#posts create
+post '/' do
+  authenticate_user
+  # current_user
+  post = Post.create(
+    body:params[:body],
+    user_id: params[:user_id]
+  )
   erb :index
 end
 

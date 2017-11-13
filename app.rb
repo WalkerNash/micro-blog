@@ -38,7 +38,7 @@ end
 # End Fatima's routes
 # *Dallas Start*
 get '/profile' do
-  redirect '/'
+  erb :'profile'
 end
 
 get '/profile/:id' do

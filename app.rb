@@ -19,10 +19,29 @@ set :database, "sqlite3:development.sqlite3"
 
 # Define routes below
 get '/' do
+<<<<<<< HEAD
   # @posts = Post.all
   erb :index
 end
 
+=======
+  # authenticate_user
+  @posts = Post.all
+  erb :index
+end
+
+#posts create
+post '/' do
+  authenticate_user
+  # current_user
+  post = Post.create(
+    body:params[:body],
+    user_id: params[:user_id]
+  )
+  erb :index
+end
+
+>>>>>>> master
 # Fatima's routes
 get '/logout' do
   session.clear
@@ -37,6 +56,31 @@ post '/login' do
 end
 # End Fatima's routes
 # *Dallas Start*
+<<<<<<< HEAD
+=======
+get '/profile' do
+  @user = current_user
+  redirect "/profile/#{@user.id}"
+  @posts = Post.find_by_id(params[:user_id])
+
+end
+
+get '/profile/:id' do
+  @user = current_user
+  @post = Post.find_by_id(params[:user_id])
+  erb :'profile'
+end
+
+post "/profile/#{@user_id}" do
+  @user = current_user
+  # @post.body.create(body: params[:body], user_id: params[:user_id])
+  post = Post.create(
+    body: params[:body],
+    user_id: params[:user_id]
+  )
+  redirect "/profile/#{@user.id}"
+end
+>>>>>>> master
 # *Dallas End*
 #Mike's routes start here
 
@@ -48,21 +92,21 @@ get '/account' do
   end
 end
 
-patch '/profile/:id' do
-  user = User.find_by_id(params[:id])
-  user.update(
+patch '/profile' do
+    @user = current_user
+    @user.update(
     username: params[:username],
     f_name: params[:f_name],
     l_name: params[:l_name],
     location: params[:location],
     email: params[:email]
   )
-  redirect "/profile/#{user.id}"
+  redirect "/profile/#{@user.id}"
 end
 
-
-delete '/profile/:id' do
-  user = User.find_by_id(params[:id])
-  user.destroy
+delete '/' do
+  @user = current_user
+  #user = User.find_by_id(params[:id])
+  @user.destroy
   redirect '/'
 end

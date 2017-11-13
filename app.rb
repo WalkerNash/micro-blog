@@ -62,7 +62,8 @@ get '/account' do
 end
 
 patch '/profile' do
-    User.update(
+    @user = current_user
+    @user.update(
     username: params[:username],
     f_name: params[:f_name],
     l_name: params[:l_name],
@@ -73,8 +74,8 @@ patch '/profile' do
 end
 
 delete '/' do
-  authenticate_user
-  user = User.find_by_id(params[:id])
-  user.destroy
+  @user = current_user
+  #user = User.find_by_id(params[:id])
+  @user.destroy
   redirect '/'
 end

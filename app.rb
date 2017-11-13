@@ -52,15 +52,17 @@ end
 get '/profile/user_id' do
   @user = current_user
   @post = Post.where(params[:user_id])
+get '/profile/:user_id' do
+  @user = current_user
+  @posts = Post.where(user_id: params[:user_id])
   erb :'profile'
 end
 
-post "/profile/#{@user_id}" do
+post "/profile" do
   @user = current_user
   # @post.body.create(body: params[:body], user_id: params[:user_id])
-  post = Post.create(
-    body: params[:body],
-    user_id: params[:user_id]
+  post = @user.posts.create(
+    body: params[:body]
   )
   redirect "/profile/#{@user.id}"
 end

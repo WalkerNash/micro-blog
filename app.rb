@@ -73,7 +73,8 @@ patch '/profile' do
 end
 
 delete '/' do
+  authenticate_user
   user = User.find_by_id(params[:id])
   user.destroy
-  erb :index
+  redirect '/'
 end

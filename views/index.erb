@@ -11,7 +11,7 @@
 <!-- Begin Post Loop -->
 <div class="post">
   <% @posts.reverse_each do |post| %>
-    <span><a href="#"> </a></span>
+    <span><a href="#"><%= post.user_id %></a></span>
     <article class="post-body">
     <%= post.body %>
     </article>
@@ -19,5 +19,3 @@
     <hr />
   <% end %>
 </div>
-
-<!-- See secret messages project for reference -->

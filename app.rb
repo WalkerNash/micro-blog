@@ -19,6 +19,12 @@ set :database, "sqlite3:development.sqlite3"
 
 # Define routes below
 get '/' do
+<<<<<<< HEAD
+  # @posts = Post.all
+  erb :index
+end
+
+=======
   # authenticate_user
   @posts = Post.all
   erb :index
@@ -35,6 +41,7 @@ post '/' do
   erb :index
 end
 
+>>>>>>> master
 # Fatima's routes
 get '/logout' do
   session.clear
@@ -49,6 +56,8 @@ post '/login' do
 end
 # End Fatima's routes
 # *Dallas Start*
+<<<<<<< HEAD
+=======
 get '/profile' do
   @user = current_user
   redirect "/profile/#{@user.id}"
@@ -71,6 +80,7 @@ post "/profile/#{@user_id}" do
   )
   redirect "/profile/#{@user.id}"
 end
+>>>>>>> master
 # *Dallas End*
 #Mike's routes start here
 

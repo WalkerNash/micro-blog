@@ -49,16 +49,9 @@ post '/login' do
 end
 # End Fatima's routes
 # *Dallas Start*
-get '/profile' do
+get '/profile/user_id' do
   @user = current_user
-  redirect "/profile/#{@user.id}"
-  @posts = Post.find_by_id(params[:user_id])
-
-end
-
-get '/profile/:id' do
-  @user = current_user
-  @post = Post.find_by_id(params[:user_id])
+  @post = Post.where(params[:user_id])
   erb :'profile'
 end
 

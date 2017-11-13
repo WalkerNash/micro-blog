@@ -1,6 +1,7 @@
 <h1>Hello world</h1>
 
 <!-- Post Form -->
+<% if current_user %>
 <div>
   <form class="" action="/" method="post">
     <input type="hidden" name="username">
@@ -8,6 +9,7 @@
     <input type="submit" value="Post">
   </form>
 </div>
+<% end %>
 
 <!-- Begin Post Loop -->
 <div class="post">

@@ -39,7 +39,8 @@ body {
 }
 
 #account-text {
-  color: white;
+  color: black;
+  text-align: center;
   font-size: 65px;
 }
 
@@ -64,13 +65,12 @@ body {
     margin: 5px 0;
     display: inline-block;
     background-color: #f7f7f9;
-    color: #f7f7f9;
     border: 1px solid #dfdfdf;
     border-radius: 8px;
     box-sizing: border-box;
 }
 
-.save-del input[type=submit], .save-del input[type=submit] {
+.save-del input[type=submit], .del input[type=submit] {
     display: inline-block;
     padding: 5px;
     height: 50px;
@@ -85,7 +85,7 @@ body {
 
     }
 
-.save-del input[type=submit]:hover, .save-del input[type=submit]:hover {
+.save-del input[type=submit]:hover, .del input[type=submit]:hover {
     background-color: #eb5966;
 
       }
@@ -254,7 +254,6 @@ hr {
   grid-template-columns: 1fr 3.5fr 1fr;
   grid-template-rows: repeat(auto-fit, auto);
   background-color: #ffffff;
-
 }
 
 .grid-spacer-1 {

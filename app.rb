@@ -89,7 +89,7 @@ end
 
 delete '/' do
   @user = current_user
-  #user = User.find_by_id(params[:id])
+  #@user = User.find_by_id(params[:id])
   @user.destroy
-  redirect '/'
+  redirect '/logout'
 end

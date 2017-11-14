@@ -69,7 +69,7 @@ body {
     box-sizing: border-box;
 }
 
-.save-del input[type=submit], .save-del input[type=submit] {
+.save-del input[type=submit], .del input[type=submit] {
     display: inline-block;
     padding: 5px;
     height: 50px;
@@ -84,7 +84,7 @@ body {
 
     }
 
-.save-del input[type=submit]:hover, .save-del input[type=submit]:hover {
+.save-del input[type=submit]:hover, .del input[type=submit]:hover {
     background-color: #eb5966;
 
       }

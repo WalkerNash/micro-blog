@@ -1,48 +1,53 @@
-<div class="acct edit-title">
-  <!-- Account Page Title Text Goes Here -->
-  <div class="acct nfo">
-    <form action="/account" method="post">
+ <div class="acct edit-title">
+   <!--Account Page Title Text Goes Here-->
+  <form action="/account" method="post">
+    <input type="hidden" name="_method" value="patch">
+
+    <div class="acct nfo">
+
       <h1 id="account-text">Edit your account</h1>
 
     </div>
     <div class="acct nfo">
-      <!-- Username -->
+        <!-- Username-->
       <input type="text" name="username" placeholder="Username" value="<%= @user.username %>">
     </div>
     <div class="acct nfo">
-      <!-- First Name -->
+      <!--  First Name-->
       <input type="text" name="f_name" placeholder="First name" value="<%= @user.f_name %>">
     </div>
     <div class="acct nfo">
-      <!-- Last Name -->
+        <!-- Last Name-->
       <input type="text" name="l_name" placeholder="Last name" value="<%= @user.l_name %>">
     </div>
     <div class="acct nfo">
-      <!-- Location -->
+      <!--  Location-->
       <input type="text" name="location" placeholder="Location" value="<%= @user.location %>">
     </div>
     <div class="acct nfo">
-      <!-- E-Mail -->
+        <!-- E-Mail-->
       <input type="email" name="email" placeholder="Email address" value="<%= @user.email %>">
     </div>
     <div class="acct save-del">
       <div class="save">
-        <!-- Save Button Goes Here -->
+      <!-- Save Button Goes Here -->
         <input type="submit" value="Save">
-        <input type="hidden" name="_method" value="patch">
-      </form>
+      </div>
     </div>
+    </form>
+
     <div class="del">
       <!-- Delete Button Goes Here -->
       <form id="delete-account" action="/" method="post">
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="Delete account">
       </form>
+
     </div>
-  </div>
+
 </div>
 
-<!-- <div id="account-background"> <div id="account-form"> <form action="/profile" method="post"> <h1 id="account-text">Edit your account</h1> <input type="hidden" name="_method" value="patch"> <input type="text" name="username"
+ <!-- <div id="account-background"> <div id="account-form"> <form action="/account" method="post"> <h1 id="account-text">Edit your account</h1> <input type="hidden" name="_method" value="patch"> <input type="text" name="username"
 placeholder="Username" value="<%= @user.username %>"> <br> <br> <input type="text" name="f_name" placeholder="First name" value="<%= @user.f_name %>"> <br> <br> <input type="text" name="l_name" placeholder="Last name" value="<%= @user.l_name %>">
 <br> <br> <input type="text" name="location" placeholder="Location" value="<%= @user.location %>"> <br> <br> <input type="email" name="email" placeholder="Email address" value="<%= @user.email %>"> <br> <br> <input type="submit" value="Save"> </form>
 <form id="delete-account" action="/" method="post"> <input type="hidden" name="_method" value="delete"> <input type="submit" value="Delete account"> </form> </form> </div> </div> -->

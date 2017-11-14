@@ -5,11 +5,16 @@
 #account-form {
     margin: 0 auto;
     width: 600px;
-    height: 1000px;
-    background-color: #262934;
-    padding: 40px;
+    height: 950px;
+    background-color: #2d313a;
+    padding: 30px;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 10px;
+}
+
+#account-text {
+  color: white;
+  font-size: 65px;
 }
 
 #account-form input[type=text] {
@@ -37,6 +42,16 @@
     box-sizing: border-box;
 }
 
-input [type=submit], select {
+#account-form input[type=submit], #delete-account input[type=submit] {
     display: inline-block;
-}
+    padding: 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #2cbebf;
+    border-radius: 20px;
+    font-size: 30px;
+    color: #2d313a;
+    float: left;
+    margin: 30px;
+
+    }

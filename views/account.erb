@@ -1,12 +1,8 @@
-
-<%= @user.id %>
-<%= @user.username %>
-
-
-
+<br>
+<br>
 <div id="account-form">
 <form action="/profile" method="post">
-<h1>Edit your account</h1>
+<h1 id="account-text">Edit your account</h1>
 <input type="hidden" name="_method" value="patch">
 
 <input type="text" name="username" placeholder="Username" value="<%= @user.username %>">
@@ -26,7 +22,7 @@
 <br>
 <input type="submit" value="Save">
 </form>
-<form class="delete-account" action="/" method="post">
+<form id="delete-account" action="/" method="post">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete account">
   </form>

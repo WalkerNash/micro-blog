@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  /*border: solid #ccc 1px;*/
 }
 
 #account-form {
@@ -27,3 +32,92 @@ input[type=email], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+/* Fatima's Styles */
+.logo {
+  min-height: 25px;
+  background-color: #262934;
+  text-align: center;
+}
+.logo img {
+ margin:10px;
+}
+
+nav {
+  background-color: #2d313a;
+  text-align: center;
+  color: #fff;
+  padding:10px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 11px;
+  background-color: #2cbebf;
+  border-radius: 24px;
+  margin-left: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+nav form {
+  display: inline;
+}
+
+nav input[type=text] {
+
+ }
+
+.new_post {
+  padding: 10px;
+}
+
+.new_post textarea {
+  width: 100%;
+  border: #dfdfdf solid 1px;
+  background-color: #f7f7f9;
+  border-radius: 7px;
+}
+
+.new_post form input[type=submit] {
+  padding: 11px;
+  background-color: #2cbebf;
+  border-radius: 24px;
+  margin-left: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+  float: right;
+  border: none;
+}
+
+hr {
+  border: #dfdfdf .7px solid;
+  margin: 10px;
+}
+
+.post {
+  margin: 10px;
+}
+
+.user_thumb {
+  border-radius: 100%;
+}
+
+.username {
+  display: block;
+}
+
+.username a {
+  color:#2d313a;
+  text-decoration: none;
+}
+
+.post_text {
+  display: inline-block;
+}
+
+ /* Fatima's Styles */

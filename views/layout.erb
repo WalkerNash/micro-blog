@@ -7,7 +7,11 @@
   </head>
   <body>
   <div class="container">
+    <div class="logo">
+      <a href="/"><img src="http://via.placeholder.com/150x50" /></a>
+    </div>
     <nav>
+      <% if current_user.nil? %>
       <!-- If logged out -->
       Sign Up or Log In:
       <form action="/login" method="post">
@@ -15,10 +19,13 @@
         <input type="text" name="username">
         <input type="submit" value="Submit">
       </form>
+      <% elsif current_user %>
       <!-- If logged in -->
+      Welcome, <%= @user.username %>!
       <a href="/profile/<%=current_user.id if current_user%>">My Profile</a>
       <a href="/account">Account Details</a>
       <a href="/logout">Log Out</a>
+      <% end %>
     </nav>
       <%= yield %>
       <script src="/js/index.js"></script>

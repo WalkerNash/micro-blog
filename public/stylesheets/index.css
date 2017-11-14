@@ -34,6 +34,11 @@ input[type=email], select {
 }
 
 /* Fatima's Styles */
+.fa {
+  margin-right: 7px;
+  color:#249e9e;
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -41,6 +46,7 @@ footer {
   background: #a4c263;
   width: 100vw;
   text-align: center;
+  color: #7e964b;
 }
 
 .logo {
@@ -70,6 +76,10 @@ nav a, nav input[type=submit] {
   font-weight: 300;
   font-size: 14px;
   border: none;
+}
+
+nav a:hover, nav input[type=submit]:hover {
+  background-color: #35cdce;
 }
 
 nav form {

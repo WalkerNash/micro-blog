@@ -22,16 +22,17 @@
       <% elsif current_user %>
       <!-- If logged in -->
       Welcome, <%= @user.username %>!
-      <a href="/profile/<%=current_user.id if current_user%>">My Profile</a>
-      <a href="/account">My Account</a>
-      <a href="/logout">Log Out</a>
+      <a href="/profile/<%=current_user.id if current_user%>"><i class="fa fa-user" aria-hidden="true"></i>My Profile</a>
+      <a href="/account"><i class="fa fa-list" aria-hidden="true"></i>My Account</a>
+      <a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a>
       <% end %>
     </nav>
       <%= yield %>
-      <script src="/js/index.js"></script>
       <footer>
-        <span>Designed and Developed by Team Clitter</span>
+        <small>Designed and Developed by Team Clitter</small>
       </footer>
+      <script src="https://use.fontawesome.com/6b7272baf0.js"></script>
+      <script src="/js/index.js"></script>
   </div><!-- End container -->
   </body>
 </html>

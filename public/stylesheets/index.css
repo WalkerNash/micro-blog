@@ -222,6 +222,14 @@ hr {
   grid-template-rows: repeat(auto-fill, 200px);
 }
 
+.grid-spacer-1 {
+  grid-column: 1 / 2;
+}
+
+.grid-spacer-2 {
+  grid-column: 3 / 4;
+}
+
 .nav-box {
   display: grid;
   grid-template-columns: 2fr 3fr 2fr;

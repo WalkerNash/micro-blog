@@ -67,3 +67,52 @@
       background-color: #eb5966;
 
         }
+
+/*Dallas Styling*/
+.pg-grid-box {
+  display: inline-grid;
+  grid-template-columns: 1fr 3.5fr 1fr;
+  grid-template-rows: repeat(auto-fill, 200px);
+}
+
+.nav-box {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+}
+
+.post-submit-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.post-submit-btn {
+  grid-row: 3 / 4;
+  grid-column: 6 / 8;
+}
+
+.user-post {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+}
+
+.profile-nfo-box {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+}
+
+.profile-nfo {
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+}
+
+.un-div {
+  grid-row: 1 / 2;
+}
+
+.acct {}
+
+.save-del {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

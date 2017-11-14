@@ -7,17 +7,14 @@
   /*border: solid #ccc 1px;*/
 }
 
-/*.grid-spacer-1 {
-  grid-column: 1 / 2;
+textarea {
+    resize: none !important;
 }
-
-.grid-spacer-2 {
-  grid-column: 3 / 4;
-}*/
 
 /* Mike's Styles */
 body {
   display: grid;
+  padding-bottom: 55px;
 }
 
 
@@ -241,7 +238,7 @@ hr {
 .pg-grid-box {
   display: inline-grid;
   grid-template-columns: 1fr 3.5fr 1fr;
-  grid-template-rows: repeat(auto-fit, 125px);
+  grid-template-rows: repeat(auto-fit, auto);
 }
 
 .grid-spacer-1 {

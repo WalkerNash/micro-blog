@@ -1,16 +1,18 @@
 <h1>Profile Page</h1>
 
 <!-- Post Form -->
+<% if current_user %>
 <div>
   <form class="" action="/profile" method="post">
     <textarea name="body" rows="8" cols="80"></textarea>
     <input type="submit" value="Post">
   </form>
 </div>
+<% end %>
+
 
 <div class="post">
 <% @posts.reverse_each do |post| %>
-  <span><a href="#"><%= post.user.username %></a></span>
   <article class="post-body">
   <%= post.body %>
   </article>

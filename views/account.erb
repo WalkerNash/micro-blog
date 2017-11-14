@@ -3,7 +3,7 @@
 <div class="acct nfo">
   <form action="/profile" method="post">
   <h1 id="account-text">Edit your account</h1>
-  <input type="hidden" name="_method" value="patch">
+
 </div>
 <div class="acct nfo">
   <!-- Username -->
@@ -29,11 +29,15 @@
   <div class="save">
     <!-- Save Button Goes Here -->
     <input type="submit" value="Save">
+    <input type="hidden" name="_method" value="patch">
+  </form>
   </div>
   <div class="del">
     <!-- Delete Button Goes Here -->
+    <form id="delete-account" action="/" method="post">
     <input type="submit" value="Delete account">
     <input type="hidden" name="_method" value="delete">
+  </form>
   </div>
 </div>
 </div>

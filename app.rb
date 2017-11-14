@@ -84,7 +84,7 @@ patch '/profile' do
     location: params[:location],
     email: params[:email]
   )
-  redirect "/profile/#{@user.id}"
+  redirect "/account"
 end
 
 delete '/profile' do

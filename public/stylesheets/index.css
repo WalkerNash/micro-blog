@@ -38,7 +38,8 @@ body {
 }
 
 #account-text {
-  color: white;
+  color: black;
+  text-align: center;
   font-size: 65px;
 }
 
@@ -63,7 +64,6 @@ body {
     margin: 5px 0;
     display: inline-block;
     background-color: #f7f7f9;
-    color: #f7f7f9;
     border: 1px solid #dfdfdf;
     border-radius: 8px;
     box-sizing: border-box;
@@ -241,7 +241,7 @@ hr {
 .pg-grid-box {
   display: inline-grid;
   grid-template-columns: 1fr 3.5fr 1fr;
-  grid-template-rows: repeat(auto-fit, 125px);
+  grid-template-rows: repeat(auto-fit, auto);
 }
 
 .grid-spacer-1 {

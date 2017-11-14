@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Micro-Blogging</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
     <link rel="stylesheet" href="/stylesheets/index.css">
   </head>
   <body>
-  <div class="container">
+  <div class="pg-grid-box">
     <div class="logo">
       <a href="/"><img src="http://via.placeholder.com/150x50" /></a>
     </div>
+    <div class="grid-spacer-1"></div>
     <nav>
       <% if current_user.nil? %>
       <!-- If logged out -->
@@ -28,6 +30,7 @@
       <% end %>
     </nav>
       <%= yield %>
+      <div class="grid-spacer-2"></div>
       <footer>
         <small>Designed and Developed by Team Clitter</small>
       </footer>

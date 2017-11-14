@@ -7,6 +7,8 @@
   /*border: solid #ccc 1px;*/
 }
 
+
+/* Mike's Styles */
 body {
   display: grid;
 }
@@ -39,6 +41,7 @@ body {
     padding: 5px 5px;
     margin: 5px 0;
     display: inline-block;
+    background-color: #f7f7f9;
     border: 1px solid #dfdfdf;
     border-radius: 8px;
     box-sizing: border-box;
@@ -51,11 +54,32 @@ body {
     padding: 5px 10px;
     margin: 5px 0;
     display: inline-block;
+    background-color: #f7f7f9;
     color: #f7f7f9;
     border: 1px solid #dfdfdf;
     border-radius: 8px;
     box-sizing: border-box;
 }
+
+.save-del input[type=submit], .save-del input[type=submit] {
+    display: inline-block;
+    padding: 5px;
+    height: 50px;
+    width: 210px;
+    background-color: #2cbebf;
+    border: 1px solid #dfdfdf;
+    border-radius: 20px;
+    font-size: 25px;
+    color: white;
+    float: left;
+    margin: 30px;
+
+    }
+
+.save-del input[type=submit]:hover, .save-del input[type=submit]:hover {
+    background-color: #eb5966;
+
+      }
 
 
 /* Fatima's Styles */
@@ -200,25 +224,7 @@ hr {
 
  /* Fatima's Styles End */
 
-.save-del input[type=submit], .save-del input[type=submit] {
-    display: inline-block;
-    padding: 5px;
-    height: 50px;
-    width: 210px;
-    background-color: #2cbebf;
-    border: 1px solid #dfdfdf;
-    border-radius: 20px;
-    font-size: 25px;
-    color: white;
-    float: left;
-    margin: 30px;
 
-    }
-
-    #account-form input[type=submit]:hover, #delete-account input[type=submit]:hover {
-      background-color: #eb5966;
-
-        }
 
 /*Dallas Styling*/
 .pg-grid-box {

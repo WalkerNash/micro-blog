@@ -15,20 +15,23 @@
       <!-- If logged out -->
       Sign Up or Log In:
       <form action="/login" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username">
+        <label for="username"></label>
+        <input type="text" name="username" placeholder="Enter Username">
         <input type="submit" value="Submit">
       </form>
       <% elsif current_user %>
       <!-- If logged in -->
       Welcome, <%= @user.username %>!
       <a href="/profile/<%=current_user.id if current_user%>">My Profile</a>
-      <a href="/account">Account Details</a>
+      <a href="/account">My Account</a>
       <a href="/logout">Log Out</a>
       <% end %>
     </nav>
       <%= yield %>
       <script src="/js/index.js"></script>
+      <footer>
+        <span>Designed and Developed by Team Clitter</span>
+      </footer>
   </div><!-- End container -->
   </body>
 </html>

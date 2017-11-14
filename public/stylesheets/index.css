@@ -34,6 +34,15 @@ input[type=email], select {
 }
 
 /* Fatima's Styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  background: #a4c263;
+  width: 100vw;
+  text-align: center;
+}
+
 .logo {
   min-height: 25px;
   background-color: #262934;
@@ -50,7 +59,7 @@ nav {
   padding:10px;
 }
 
-nav a {
+nav a, nav input[type=submit] {
   display: inline-block;
   padding: 11px;
   background-color: #2cbebf;
@@ -60,6 +69,7 @@ nav a {
   text-decoration: none;
   font-weight: 300;
   font-size: 14px;
+  border: none;
 }
 
 nav form {
@@ -67,7 +77,18 @@ nav form {
 }
 
 nav input[type=text] {
-
+  height: 40px;
+  border-radius: 0px;
+  background-color: #484d58;
+  border: none;
+  margin-left: 10px;
+  color:#fff;
+  font-size: 14px;
+ }
+ nav input[type=text]::placeholder {
+   color: #7d8492;
+   font-size: 14px;
+   font-style: italic;
  }
 
 .new_post {
@@ -79,6 +100,13 @@ nav input[type=text] {
   border: #dfdfdf solid 1px;
   background-color: #f7f7f9;
   border-radius: 7px;
+}
+
+.new_post textarea::placeholder {
+  font-size: 22px;
+  color: #dfdfdf;
+  padding: 5px;
+  font-style: italic;
 }
 
 .new_post form input[type=submit] {
@@ -105,19 +133,33 @@ hr {
 
 .user_thumb {
   border-radius: 100%;
+  height: 70px;
+  border: .7px solid #dfdfdf;
+}
+
+.user_thumb:hover {
+  border: 3px solid #2cbebf;
 }
 
 .username {
   display: block;
+  font-size: 18px;
 }
 
 .username a {
-  color:#2d313a;
+  color: #a8a9ad;
   text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.username a:hover {
+  color: #2cbebf;
 }
 
 .post_text {
   display: inline-block;
+  color: #2d313a;
 }
 
  /* Fatima's Styles */

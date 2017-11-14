@@ -3,7 +3,7 @@
 <div class="new_post">
   <form class="" action="/" method="post">
     <input type="hidden" name="username">
-    <textarea name="body" rows="8" cols="80"></textarea>
+    <textarea name="body" rows="8" cols="80" placeholder="What's up with you today?"></textarea>
     <input type="submit" value="Post">
   </form>
 </div>
@@ -13,7 +13,7 @@
 <div class="post">
   <% @posts.reverse_each do |post| %>
     <article class="post-body">
-      <a href="/"><img class="user_thumb" src="http://via.placeholder.com/100x100" /></a>
+      <a href="/profile/<%= post.user_id %>"><img class="user_thumb" src="http://via.placeholder.com/100x100" /></a>
       <div class="post_text">
         <span class="username"><a href="/profile/<%= post.user_id %>"><%= post.user.username %></a></span>
         <%= post.body %>

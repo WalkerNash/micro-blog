@@ -241,7 +241,7 @@ hr {
 .pg-grid-box {
   display: inline-grid;
   grid-template-columns: 1fr 3.5fr 1fr;
-  grid-template-rows: repeat(auto-fit, 125px);
+  grid-template-rows: repeat(auto-fit, auto);
 }
 
 .grid-spacer-1 {

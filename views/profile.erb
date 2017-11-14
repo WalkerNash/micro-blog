@@ -1,22 +1,22 @@
-<h1>Profile Page</h1>
-
-<!-- Post Form -->
 <% if current_user %>
-<div>
+<div class="new_post">
   <form class="" action="/profile" method="post">
-    <textarea name="body" rows="8" cols="80"></textarea>
+    <textarea name="body" rows="8" cols="80" placeholder="Share what you're thinking with the world!"></textarea>
     <input type="submit" value="Post">
   </form>
 </div>
 <% end %>
-
-
-<div class="post">
 <% @posts.reverse_each do |post| %>
-  <article class="post-body">
-  <%= post.body %>
-  </article>
-  <span>Delete</span>
-  <hr />
-<% end %>
+<div class="user-post">
+  <div class="user-img">
+    <a href="/profile/<%= post.user_id %>"><img class="user_thumb" src="http://via.placeholder.com/100x100" /></a>
+  </div>
+  <!-- <div class="un-render">
+    Render Username Here
+  </div> -->
+  <div class="body">
+    <%= post.body %>
+  </div>
 </div>
+<hr />
+<% end %>

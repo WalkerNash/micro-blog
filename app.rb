@@ -75,7 +75,7 @@ get '/account' do
   end
 end
 
-patch '/profile' do
+patch '/account' do
     @user = current_user
     @user.update(
     username: params[:username],
@@ -84,12 +84,12 @@ patch '/profile' do
     location: params[:location],
     email: params[:email]
   )
-  redirect "/profile/#{@user.id}"
+  redirect "/account"
 end
 
-delete '/profile' do
+delete '/' do
   @user = current_user
-  #user = User.find_by_id(params[:id])
+  #@user = User.find_by_id(params[:id])
   @user.destroy
-  redirect '/'
+  redirect '/logout'
 end

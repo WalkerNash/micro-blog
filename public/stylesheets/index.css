@@ -7,11 +7,19 @@
   /*border: solid #ccc 1px;*/
 }
 
+/*.grid-spacer-1 {
+  grid-column: 1 / 2;
+}
+
+.grid-spacer-2 {
+  grid-column: 3 / 4;
+}*/
 
 /* Mike's Styles */
 body {
   display: grid;
 }
+
 
 #account-background {
   width: 100%;
@@ -102,8 +110,10 @@ footer {
   min-height: 25px;
   background-color: #262934;
   text-align: center;
+  max-height: 74px;
   grid-column: 1 / 4;
 }
+
 .logo img {
  margin:10px;
 }
@@ -113,6 +123,7 @@ nav {
   text-align: center;
   color: #fff;
   padding:10px;
+  max-height: 58px;
 }
 
 nav a, nav input[type=submit] {

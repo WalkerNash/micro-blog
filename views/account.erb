@@ -6,27 +6,22 @@
 
 <div id="account-form">
 <form action="/profile" method="post">
-<h1>Edit your account details</h1>
+<h1>Edit your account</h1>
 <input type="hidden" name="_method" value="patch">
 
-<label for="username">Username: </label>
-<input type="text" name="username" value="<%= @user.username %>">
+<input type="text" name="username" placeholder="Username" value="<%= @user.username %>">
 <br>
 <br>
-<label for="f_name">First name: </label>
-<input type="text" name="f_name" value="<%= @user.f_name %>">
+<input type="text" name="f_name" placeholder="First name" value="<%= @user.f_name %>">
 <br>
 <br>
-<label for="l_name">Last name: </label>
-<input type="text" name="l_name" value="<%= @user.l_name %>">
+<input type="text" name="l_name" placeholder="Last name" value="<%= @user.l_name %>">
 <br>
 <br>
-<label for="location">Location: </label>
-<input type="text" name="location" value="<%= @user.location %>">
+<input type="text" name="location" placeholder="Location" value="<%= @user.location %>">
 <br>
 <br>
-<label for="email">Email address: </label>
-<input type="email" name="email" value="<%= @user.email %>">
+<input type="email" name="email" placeholder="Email address" value="<%= @user.email %>">
 <br>
 <br>
 <input type="submit" value="Save changes">

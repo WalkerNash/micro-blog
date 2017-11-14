@@ -14,7 +14,7 @@
 <!-- Begin Post Loop -->
 <div class="post">
   <% @posts.reverse_each do |post| %>
-    <span><a href="#"><%= post.user.username %></a></span>
+    <span><a href="/profile/<%= post.user_id %>"><%= post.user.username %></a></span>
     <article class="post-body">
     <%= post.body %>
     </article>

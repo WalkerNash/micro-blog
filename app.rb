@@ -87,7 +87,7 @@ patch '/profile' do
   redirect "/profile/#{@user.id}"
 end
 
-delete '/' do
+delete '/profile' do
   @user = current_user
   #user = User.find_by_id(params[:id])
   @user.destroy

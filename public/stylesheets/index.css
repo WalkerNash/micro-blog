@@ -67,8 +67,8 @@ body {
     box-sizing: border-box;
 }
 
-.save-del input[type=submit], .del input[type=submit] {
-    display: inline-block;
+.save-del input[type=submit] {
+    display: inline;
     padding: 5px;
     height: 50px;
     width: 210px;
@@ -77,13 +77,34 @@ body {
     border-radius: 20px;
     font-size: 25px;
     color: white;
+    margin: 15px;
     float: left;
-    margin: 30px;
 
     }
 
+    .del input[type=submit] {
+        display: inline;
+        padding: 5px;
+        height: 50px;
+        width: 210px;
+        background-color: #2cbebf;
+        border: 1px solid #dfdfdf;
+        border-radius: 20px;
+        font-size: 25px;
+        color: white;
+        margin: 15px;
+        float: right;
+
+        }
+
+
+
+
+
+
 .save-del input[type=submit]:hover, .del input[type=submit]:hover {
     background-color: #eb5966;
+    cursor: pointer;
 
       }
 
